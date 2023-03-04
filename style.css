@@ -1,0 +1,50 @@
+:root {
+    --darkgreen: #3C6255;
+    --green: #61876E;
+    --lightgreen: #A6BB8D;
+    --brown: #b6977ed0;
+    --pearl: #f9f8e7;
+    --black: #000;
+}
+
+/* Media queries */
+
+@media (min-width: 992px) and (max-width: 1399px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+/* Custom classes */
+
+.font-title {
+    font-family: 'Jost', sans-serif !important;
+}
+
+.font-normal {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+.round {
+    border-radius: 30px !important;
+}
+
+.all-centered {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.space-nowrap {
+    white-space: nowrap !important;
+}
