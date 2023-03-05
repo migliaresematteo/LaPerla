@@ -1,50 +1,186 @@
 :root {
-    --darkgreen: #3C6255;
-    --green: #61876E;
-    --lightgreen: #A6BB8D;
-    --brown: #b6977ed0;
-    --pearl: #f9f8e7;
-    --black: #000;
+  --purple: #c0a3da;
+  --dpurple: #b993d8;
+  --white: #fff;
+  --grey: #00000050;
+  --black: #000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+html body {
+  height: 100%;
+}
+html body #mainNav {
+  box-shadow: none;
+  transition: 0.2s ease;
+  background-color: white;
+}
+html body #mainNav.navbar-shrink {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: var(--pearl) !important;
+}
+html body nav {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+html body nav button.navbar-toggler, html body nav button.navbar-toggler:active, html body nav button.navbar-toggler:enabled {
+  border: none !important;
+  outline: none !important;
+}
+html body .bubble {
+  background-color: var(--purple);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+html body .bubble .bubble-2 {
+  aspect-ratio: 1/1;
+  background-color: var(--dpurple);
+  filter: drop-shadow(0 0 20px var(--grey));
+  border-radius: 50%;
+}
+html body .header-title {
+  color: var(--purple) !important;
 }
 
 /* Media queries */
-
-@media (min-width: 992px) and (max-width: 1399px) {
-
+@media (min-width: 1200px) {
+  #mainNav {
+    background-color: transparent !important;
+  }
+  .navbar-brand {
+    width: 6rem;
+  }
+  .bubble-2 {
+    transform: translate(-5rem, 10rem);
+    width: 20rem;
+    height: 20rem;
+  }
+  .bubble-image {
+    transform: scale(1.5) translateX(-8rem);
+  }
+  .header-title {
+    font-size: 7rem !important;
+  }
+  .header-paragraph {
+    font-size: 1.25rem;
+  }
 }
-
+@media (min-width: 992px) and (max-width: 1199px) {
+  #mainNav {
+    background-color: transparent !important;
+  }
+  .navbar-brand {
+    width: 6rem;
+  }
+  .bubble-2 {
+    transform: translate(-5rem, 10rem);
+    width: 15rem;
+    height: 15rem;
+  }
+  .bubble-image {
+    transform: scale(1.5) translateX(-2rem);
+  }
+  .header-title {
+    font-size: 7rem !important;
+  }
+  .header-paragraph {
+    font-size: 1.25rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .navbar-brand {
+    width: 5rem;
+  }
+  .bubble-2 {
+    transform: translate(-2rem, 7rem);
+    width: 12rem;
+    height: 12rem;
+  }
+  .bubble-image {
+    transform: scale(1.5) translateX(-3rem);
+  }
+  .header-title {
+    font-size: 5rem !important;
+    white-space: nowrap;
+  }
 }
-
 @media (max-width: 767px) {
-
+  .navbar-brand {
+    width: 4.5rem;
+  }
+  .bubble-2 {
+    transform: translate(-14rem, 5rem);
+    width: 6rem;
+    height: 6rem;
+  }
+  .bubble-image {
+    transform: scale(1.5) translateX(3.5rem) rotate(10deg);
+  }
+  .header-title {
+    font-size: 4rem !important;
+    white-space: nowrap;
+  }
+  .header-paragraph {
+    font-size: 0.85rem;
+  }
 }
-
 @media (max-width: 480px) {
-
+  .navbar-brand {
+    width: 4rem;
+  }
+  .bubble-2 {
+    display: none !important;
+  }
+  .bubble-image {
+    transform: scale(3) translate(-0.5rem);
+  }
+  .header-title {
+    font-size: 3rem !important;
+    white-space: nowrap;
+  }
 }
-
 /* Custom classes */
-
 .font-title {
-    font-family: 'Jost', sans-serif !important;
+  font-family: "Jost", sans-serif !important;
 }
 
 .font-normal {
-    font-family: 'IBM Plex Sans', sans-serif !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
 }
 
 .round {
-    border-radius: 30px !important;
+  border-radius: 20px !important;
 }
 
 .all-centered {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .space-nowrap {
-    white-space: nowrap !important;
+  white-space: nowrap !important;
 }
+
+.color-blk {
+  color: var(--black);
+}
+
+.color-prp {
+  color: var(--purple);
+}
+
+/*# sourceMappingURL=style.css.map */
